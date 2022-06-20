@@ -65,10 +65,7 @@ public class SondaService {
         for (int i = 0; i < sondaDTO.getMovimento().length(); i++) {
             String s = sondaDTO.getMovimento().substring(i, i + 1);
             switch (s) {
-                case "M" -> {
-                    this.moverSonda(sonda, maxX, maxY);
-                    break;
-                }
+                case "M" -> this.moverSonda(sonda, maxX, maxY);
                 case "R" -> this.girarDir(sonda);
                 case "L" -> this.girarEsq(sonda);
                 default -> logger.info(VALOR_INVALIDO);
